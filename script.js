@@ -57,3 +57,48 @@ function ruuDisappear(){
   ruu1.classList.remove('ruuAppear');
   ruu1.classList.add('ruuDisappear');
 };
+
+
+// Close and expand window
+
+
+
+
+
+
+const exitButtons = document.querySelectorAll('.closeWindowBtn');
+
+  // Loop through each exit button and add a click event listener
+  exitButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get the parent article element and remove it from the DOM
+      const article = button.closest('article');
+      article.classList.remove('projectAppear');
+      article.classList.add('projectDisappear');
+    });
+  });
+
+const fullScreenBtns = document.querySelectorAll('.fullScreenBtn');
+
+  // Loop through each exit button and add a click event listener
+  fullScreenBtns.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get the parent article element and remove it from the DOM
+      const article = button.closest('article');
+      if(article.classList.contains('projectnormalSize')){
+        article.classList.remove('projectnormalSize');
+        article.classList.add('projectFullSize');
+      } else {
+        article.classList.remove('projectFullSize');
+        article.classList.add('projectnormalSize');
+      }
+
+
+  // Toggle the 'fa-expand' and 'fa-compress' classes of the i element inside the size div
+  const icon = button.querySelector('i');
+  icon.classList.toggle('fa-up-right-and-down-left-from-center');
+  icon.classList.toggle('fa-down-left-and-up-right-to-center');
+    });
+  });
+
+

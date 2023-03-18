@@ -44,6 +44,7 @@ img{
     z-index: 9999;
     color: white;
     animation: loaderDisapear 0.5s ease forwards 3.2s;
+    display: none;
 }
 
 .loader_content{
@@ -269,40 +270,6 @@ footer img{
 
 
 
-
-/* Main */
-
-main{
-    padding: 5px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Project presentation */
-
-.card{
-    border: 1px px solid rgba(199, 199, 211, .3);
-    background-color: rgba(46, 46, 46, .8);
-    border-radius: 20px;
-    backdrop-filter: blur(50px);
-    box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
-}
-.project_presentation{
-    backdrop-filter: blur(100px);
-    width: 80%;
-    height: 400px;
-    padding: 60px 20px;
-    color: white;
-    display: none;
-}
-
-.project_presentation h1{
-    font-size: 48px;
-    width: 100%;
-    text-align: center;
-}
-
 /* Error message */
 
 #error {
@@ -383,11 +350,11 @@ main{
 }
 
 .buttonSection button{
-    background-color: transparent;
+    background-color: #3c424d;
     padding: 5px 10px;
-    border-radius: 20px;
-    border: #5c5e77 1px solid;
-    color: rgb(179, 177, 177);
+    border-radius: 10px;
+    border: none;
+    color: #bcc1cc;
 }
 
 
@@ -395,8 +362,8 @@ main{
     position: absolute;
     top: -5px;
     left: -5px;
-    border: 1px px solid rgba(199, 199, 211, .3);
-    background-color: #f1f1f190;
+    border: 1px solid rgba(199, 199, 211, .3);
+    background-color: #2a2a33;
     border-radius: 50%;
     box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
     display: flex;
@@ -404,19 +371,149 @@ main{
     align-items: center;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
-/*
-.ruu1 .fa-xmark::after{
-    content: '';
-    width: 200%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px px solid rgba(199, 199, 211, .3);
+.ruu1 .closeBtn:hover, .buttonSection button:hover{
+    filter: brightness(110%);
+}
+
+.ruu1 .closeBtn i{
+    font-size: 0.8rem;
+}
+
+
+/* Main */
+
+main {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+/* Project presentation */
+
+.card {
+    border: 1px solid rgba(199, 199, 211, .3);
     background-color: rgba(46, 46, 46, .8);
-    border-radius: 50%;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
     box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
 }
+
+.project_presentation {
+    backdrop-filter: blur(100px);
+    width: 80%;
+    height: 400px;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_presentation h1 {
+    font-size: 48px;
+    width: 100%;
+    text-align: center;
+}
+
+.project_header{
+    width: 100vw;
+    padding: 5px 20px;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.project_header div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeWindowBtn{
+    background-color: red;
+}
+
+.fullScreenBtn{
+    background-color: green;
+}
+
+
+.project_header div i{
+    font-size: 0.6rem;
+}
+
+/* <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
 */
+
+
+.projectFullSize {
+    animation: projectFullSize 0.5s ease-in-out forwards ;
+}
+
+.projectnormalSize {
+    animation: normalSize 0.5s ease-in-out forwards ;
+}
+
+@keyframes projectFullSize {
+    from{
+    width: 80%;
+    height: 400px;
+    }
+    to{
+    width: 100vw;
+    height: 100%;
+    }
+}
+@keyframes normalSize {
+    from{
+    width: 100vw;
+    height: 100%;
+    }
+    to{
+    width: 80%;
+    height: 400px;
+    }
+}
+
+.projectAppear {
+    animation: projectAppear 0.5s ease-in-out forwards;
+}
+
+.projectDisappear {
+    animation: projectDisappear 0.5s ease-in-out forwards;
+}
+
+
+@keyframes projectAppear {
+    from {
+        display: none;
+        opacity: 0;
+    }
+
+    to {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@keyframes projectDisappear {
+    from {
+        display: flex;
+        opacity: 1;
+    }
+
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
