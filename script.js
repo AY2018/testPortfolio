@@ -39,3 +39,21 @@ function displayTime() {
 
 // update the time every second
 setInterval(displayTime, 1000);
+
+
+
+
+// -----------------  Ruu
+// Ruu 1 
+
+let ruu1 = document.getElementById('ruu1');
+
+function ruuAppear(){
+  ruu1.classList.remove('ruuDisappear');
+  ruu1.classList.add('ruuAppear');
+};
+
+function ruuDisappear(){
+  ruu1.classList.remove('ruuAppear');
+  ruu1.classList.add('ruuDisappear');
+};

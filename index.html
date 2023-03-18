@@ -67,7 +67,7 @@
                     
                     
                     <li class="Langues"><a href=""><img src="./img/Flag_of_France.png" alt=""></a></li>
-                    <li><a href=""><i class="fa-solid fa-circle-info"></i></a></li>
+                    <li><i onclick="ruuAppear()" class="fa-solid fa-circle-info"></i></li>
                     <li id="time"></li>
                 </ul>
             </div>
@@ -75,9 +75,26 @@
     </header>
 
     <main id="main">
-        <article class="project_presentation">
+        <article class="project_presentation card">
             <h1>Alma Rayan</h1>
         </article>
+
+        <!-- Ruu -->
+        <aside class="ruu1 card" id="ruu1">
+            <div class="closeBtn">
+                <i class="fa-solid fa-xmark" onclick="ruuDisappear()"></i>
+            </div>
+            
+            <img src="./img/Ruu_1.png" alt="" class="ruu">
+            <div class="texteSection">
+                <p>Hi there ! I'm Ruu your personal assistant. <br> How can I help you today?</p>
+                <div class="buttonSection">
+                    <button>This Website</button>
+                    <button>About Ayoub</button>
+                    <button>The Protfolio</button>
+                </div>
+            </div>
+        </aside>
     </main>
 
     <!-- Footer -->
@@ -92,11 +109,12 @@
             <li class="Panth_footer">
                 <img src="./img/logo_panthere.png" alt="">
             </li>
-            <li class="ohMy_footer">
-                <img src="./img/Group 1.svg" alt="">
+            <li class="massy_footer">
+                <img src="./img/massy.png" alt="">
             </li>
         </ul>
     </footer>
     <script src="./script.js"></script>
 </body>
 </html>
+

@@ -10,6 +10,8 @@ body{
     min-height: 100vh;
     background-position: center;
     background-size: cover;
+    color: white;
+    overflow: hidden;
 }
 
 li{
@@ -261,32 +263,38 @@ footer img{
     background-color: white;
 }
 
+.massy_footer{
+    background-color: black;
+}
+
+
+
 
 /* Main */
 
 main{
     padding: 5px 20px;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    display: none;
 }
 
 /* Project presentation */
 
-.project_presentation{
-    backdrop-filter: blur(100px);
-    width: 80%;
-    height: 400px;
+.card{
     border: 1px px solid rgba(199, 199, 211, .3);
     background-color: rgba(46, 46, 46, .8);
     border-radius: 20px;
     backdrop-filter: blur(50px);
     box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
+}
+.project_presentation{
+    backdrop-filter: blur(100px);
+    width: 80%;
+    height: 400px;
     padding: 60px 20px;
     color: white;
+    display: none;
 }
 
 .project_presentation h1{
@@ -326,3 +334,89 @@ main{
 .Disappear{
     display: none !important;
 }
+
+
+
+.ruu{
+    width: 80px;
+}
+
+.ruu1{
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    right: -100%;
+    top: 31px;
+    gap: 20px;
+}
+
+.ruuAppear{
+    animation: ruuAppear 0.6s ease forwards;
+}
+
+@keyframes ruuAppear {
+    from{right: -100%;}
+    to{right: 20px;}
+}
+
+.ruuDisappear {
+    animation: Disappear 0.6s ease forwards;
+}
+
+@keyframes Disappear {
+    from {
+        right: 20px;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+.buttonSection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buttonSection button{
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: #5c5e77 1px solid;
+    color: rgb(179, 177, 177);
+}
+
+
+.ruu1 .closeBtn{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border: 1px px solid rgba(199, 199, 211, .3);
+    background-color: #f1f1f190;
+    border-radius: 50%;
+    box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+/*
+.ruu1 .fa-xmark::after{
+    content: '';
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px px solid rgba(199, 199, 211, .3);
+    background-color: rgba(46, 46, 46, .8);
+    border-radius: 50%;
+    box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, .2);
+}
+*/
